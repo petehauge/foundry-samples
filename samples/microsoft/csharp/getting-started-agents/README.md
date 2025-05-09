@@ -18,7 +18,8 @@ This table tracks the current status of code samples for each supported tool in 
 | **Basic Agent**    | Using agent with no tools              | ❌ Doesn't exist|                                               |
 | **Bing**           | Using Bing in an agent                 | ⚠️ Exists| Sample updated - get "Bing Search API key is missing" error |
 | **File Search**    | Uploading files                        | ✅/⚠️ | Sample updated - **Sync** sample works, **Async** sample crashes on await agentClient.Files.UploadFileAsync() |
-|                    | Using blob storage (project data assets)| ❌ Doesn't exist|                                               |
+|                    | Using blob storage (project data assets)| ⚠️ Exists| Sample not yet tested - but compiles properly and follows updated coding patterns |
+exist|                                               |
 |                    | Managing files                         | ❌ Doesn't exist|                                               |
 | **Azure AI Search**| Using a knowledge store                | ❌ Doesn't exist|                                               |
 | **Fabric**         | Grounding with Fabric data             | ❌ Doesn't exist|                                               |
