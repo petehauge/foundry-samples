@@ -16,12 +16,7 @@ var projectEndpoint = configuration["ProjectEndpoint"];
 var modelDeploymentName = configuration["ModelDeploymentName"];
 
 // Create the Agent Client
-PersistentAgentsClient agentClient = new(
-    projectEndpoint,
-    new DefaultAzureCredential(),
-    new PersistentAgentsAdministrationClientOptions(
-        PersistentAgentsAdministrationClientOptions.ServiceVersion.V2025_05_01
-    ));
+PersistentAgentsClient agentClient = new(projectEndpoint, new DefaultAzureCredential());
 
 // Create a local sample file
 await System.IO.File.WriteAllTextAsync(

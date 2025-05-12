@@ -17,12 +17,7 @@ var modelDeploymentName = configuration["ModelDeploymentName"];
 var blobURI = configuration["AzureBlobUri"];
 
 // Create the Agent Client
-PersistentAgentsClient agentClient = new(
-    projectEndpoint,
-    new DefaultAzureCredential(),
-    new PersistentAgentsAdministrationClientOptions(
-        PersistentAgentsAdministrationClientOptions.ServiceVersion.V2025_05_01
-    ));
+PersistentAgentsClient agentClient = new(projectEndpoint, new DefaultAzureCredential());
 
 // Create the vector store used when creating the agent
 var ds = new VectorStoreDataSource(

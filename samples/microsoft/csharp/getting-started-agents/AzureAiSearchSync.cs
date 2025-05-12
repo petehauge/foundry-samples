@@ -26,12 +26,7 @@ AzureAISearchResource searchResource = new(
 ToolResources toolResource = new() { AzureAISearch = searchResource };
 
 // Create the Agent Client
-PersistentAgentsClient agentClient = new(
-    projectEndpoint,
-    new DefaultAzureCredential(),
-    new PersistentAgentsAdministrationClientOptions(
-        PersistentAgentsAdministrationClientOptions.ServiceVersion.V2025_05_01
-    ));
+PersistentAgentsClient agentClient = new(projectEndpoint, new DefaultAzureCredential());
 
 // Create an agent with Tools and Tool Resources
 PersistentAgent agent = agentClient.Administration.CreateAgent(

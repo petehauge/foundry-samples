@@ -10,12 +10,7 @@ var modelDeploymentName = configuration["ModelDeploymentName"];
 var blobURI = configuration["AzureBlobUri"];
 
 // Create the Agent Client
-PersistentAgentsClient agentClient = new(
-    projectEndpoint,
-    new DefaultAzureCredential(),
-    new PersistentAgentsAdministrationClientOptions(
-        PersistentAgentsAdministrationClientOptions.ServiceVersion.V2025_05_01
-    ));
+PersistentAgentsClient agentClient = new(projectEndpoint, new DefaultAzureCredential());
 ```
 
 2. To create agent capable of using Enterprise file search, we will create `VectorStoreDataSource` and will supply it to `VectorStore` constructor. The ID of the created vector store will be used in the `FileSearchToolResource` used for agent creation. 
